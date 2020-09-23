@@ -8,11 +8,11 @@ public class DeltaV : MonoBehaviour
     private Vector3 vLast;
 
 
-    [SerializeField]
-    private Transform _arrow;
+    //[SerializeField]
+    //private Transform _arrow;
 
-    [SerializeField]
-    private float _deltaTime;
+    //[SerializeField]
+    //private float _deltaTime;
 
     // Start is called before the first frame update
     void Start()
