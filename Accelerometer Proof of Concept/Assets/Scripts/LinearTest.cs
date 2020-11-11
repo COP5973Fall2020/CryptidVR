@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LinearTest : MonoBehaviour
 {
-    
+    [SerializeField]
     private float V = 0;
     // Start is called before the first frame update
     void Start()
@@ -16,13 +16,31 @@ public class LinearTest : MonoBehaviour
     void FixedUpdate()
     {
        
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            V = V + 0.5f;
+            
+                V += 0.5f;
         }
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            V = V - 0.5f;
+            
+                V -= 0.5f;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (V > 0)
+            {
+                V -= 0.5f;
+            }
+            else if (V < 0)
+            {
+                V += 0.5f;
+            }
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            transform.position = Vector3.zero;
+            V = 0;
         }
         /*else
         {
